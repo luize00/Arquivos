@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes>
+    <entry>
+      <string>shapeType</string>
+      <shapeType>CUSTOM</shapeType>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>8</int>
+    </entry>
+    <entry>
+      <string>customShape</string>
+      <shape>
+        <pins>
+          <entry>
+            <string>Endereço-(32)</string>
+            <pin>
+              <pos x="0" y="0"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Instrução</string>
+            <pin>
+              <pos x="160" y="40"/>
+              <showLabel>false</showLabel>
+            </pin>
+          </entry>
+        </pins>
+        <drawables>
+          <poly>
+            <poly path="M 0,-10 L 160,-10 L 160,50 L 0,50 Z" evenOdd="false"/>
+            <thickness>4</thickness>
+            <filled>true</filled>
+            <color>
+              <red>255</red>
+              <green>255</green>
+              <blue>180</blue>
+              <alpha>200</alpha>
+            </color>
+          </poly>
+          <poly>
+            <poly path="M 0,-10 L 160,-10 L 160,50 L 0,50 Z" evenOdd="false"/>
+            <thickness>4</thickness>
+            <filled>false</filled>
+            <color>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+          </poly>
+          <text>
+            <p1 x="4" y="6"/>
+            <p2 x="5" y="6"/>
+            <text>Endereço-(32)</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="156" y="44"/>
+            <p2 x="157" y="44"/>
+            <text>Instrução</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>18</size>
+            <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+        </drawables>
+        <label>
+          <p1 x="80" y="-20"/>
+          <p2 x="81" y="-20"/>
+          <text></text>
+          <orientation>CENTERBOTTOM</orientation>
+          <size>24</size>
+          <color>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </color>
+        </label>
+      </shape>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>ROM</elementName>
+      <elementAttributes>
+        <entry>
+          <string>AddrBits</string>
+          <int>24</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>Addr Bits</string>
+          <int>15</int>
+        </entry>
+        <entry>
+          <string>Data</string>
+          <data>20080005,2108000a</data>
+        </entry>
+        <entry>
+          <string>lastDataFile</string>
+          <string>/home/luiz/teste.hex</string>
+        </entry>
+      </elementAttributes>
+      <pos x="420" y="660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>bidirectional data bus
+{{de Der bidirektionelle Datenbus}}</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Instrução</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="560" y="680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>address bus
+{{de Der Adressbus}}</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Endereço-(32)</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>mirror</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Input Splitting</string>
+          <string>32</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>2,24,6</string>
+        </entry>
+      </elementAttributes>
+      <pos x="240" y="680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes/>
+      <pos x="400" y="740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>*Usamos o distribuidor porque o 
+endereçamento do MIPS é por byte 
+e a ROM do Digital é por palavra. 
+E assim usamos palavra de 32 
+bits.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>*Os bits 26-31 é pela limitação do 
+tamanho máximo da memória que é 
+possível simular no Digital.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="220" y="560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>*O valor fixo em 1 é porque essa 
+memória foi projetada para 
+trabalhar com múltiplos bancos 
+de memória e usamos apenas 
+uma.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="420" y="760"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="260" y="660"/>
+      <p2 x="420" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="680"/>
+      <p2 x="240" y="680"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="680"/>
+      <p2 x="560" y="680"/>
+    </wire>
+    <wire>
+      <p1 x="400" y="700"/>
+      <p2 x="420" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="400" y="700"/>
+      <p2 x="400" y="740"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

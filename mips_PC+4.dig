@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes>
+    <entry>
+      <string>Width</string>
+      <int>6</int>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>mips_somador32bits.dig</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Soma32bits</string>
+        </entry>
+      </elementAttributes>
+      <pos x="160" y="600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Clock</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-200" y="600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>4</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="60" y="740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>mips_PC.dig</elementName>
+      <elementAttributes/>
+      <pos x="-100" y="580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Clear</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-200" y="660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Saida</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="520"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="-140" y="480"/>
+      <p2 x="440" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="640"/>
+      <p2 x="160" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="580"/>
+      <p2 x="-100" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="740"/>
+      <p2 x="100" y="740"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="660"/>
+      <p2 x="-160" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="600"/>
+      <p2 x="120" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="600"/>
+      <p2 x="-100" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="600"/>
+      <p2 x="160" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="520"/>
+      <p2 x="200" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="300" y="620"/>
+      <p2 x="440" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="620"/>
+      <p2 x="160" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="620"/>
+      <p2 x="-100" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="620"/>
+      <p2 x="100" y="740"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="480"/>
+      <p2 x="440" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="520"/>
+      <p2 x="120" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="-140" y="480"/>
+      <p2 x="-140" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="640"/>
+      <p2 x="140" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="620"/>
+      <p2 x="-160" y="660"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
